@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="history">
+    <header>
+        <h1>Daily Expense Tracker</h1>
+        <p>Manage your everyday spending</p>
+    </header>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="add-expense.html">Add Expense</a>
+        <a href="history.html" class="active">Expense History</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+    <main>
+        <h2>Expense History</h2>
+        <p class="intro">Search, filter and manage your transactions.</p>
+        <section class="panel">
+            <div class="filter-grid">
+                <div class="form-group">
+                    <label for="search">Search by Name</label>
+                    <input type="text" id="search"
+                           placeholder="Enter expense name">
+                </div>
+                <div class="form-group">
+                    <label for="filter">Category</label>
+                    <select id="filter">
+                        <option>All Categories</option>
+                        <option>Food</option>
+                        <option>Travel</option>
+                        <option>Shopping</option>
+                        <option>Education</option>
+                        <option>Bills</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sort">Sort By</label>
+                    <select id="sort">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="high">Amount: High to Low</option>
+                        <option value="low">Amount: Low to High</option>
+                    </select>
+                </div>
+            </div>
+            <p id="historyCount" class="intro"></p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Payment</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyList"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

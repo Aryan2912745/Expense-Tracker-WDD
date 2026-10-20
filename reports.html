@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Reports</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="reports">
+    <header>
+        <h1>Daily Expense Tracker</h1>
+        <p>Manage your everyday spending</p>
+    </header>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="add-expense.html">Add Expense</a>
+        <a href="history.html">Expense History</a>
+        <a href="reports.html" class="active">Reports</a>
+    </nav>
+    <main>
+        <h2>Expense Reports</h2>
+        <p class="intro">Understand your spending habits.</p>
+        <section class="panel">
+            <div class="form-group month-select">
+                <label for="month">Select Month</label>
+                <input type="month" id="month">
+            </div>
+            <div class="summary">
+                <div class="box">
+                    <p>Monthly Spending</p>
+                    <h3 id="monthlyTotal">₹0.00</h3>
+                </div>
+                <div class="box">
+                    <p>Transactions</p>
+                    <h3 id="monthlyCount">0</h3>
+                </div>
+                <div class="box">
+                    <p>Average Expense</p>
+                    <h3 id="average">₹0.00</h3>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <h2>Category-wise Spending</h2>
+            <div id="categoryReport"></div>
+        </section>
+        <section class="panel">
+            <h2>Monthly Expense Details</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportList"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
