@@ -42,7 +42,3 @@ No additional installation is required.
 ## Note
 
 This is a basic front-end project created for learning web development. The expenses are stored using browser `sessionStorage`, so they are temporary and are cleared when the browser tab's session ends. The data is not stored in a permanent database.
-
-## Author
-
-Created as a Web Development course project.
